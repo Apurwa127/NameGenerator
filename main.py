@@ -10,11 +10,11 @@ st.write("Hello! This is Apurwa Bhattarai and I would like to welome you to the 
 
 
 def user_input():
-    relation = st.text_input("please enter your relation with the couple: ")
+    relation = st.text_input("Please enter your relationship to the couple: ")
     if relation:
 
         st.write("hello! ", relation)
-        origin = st.selectbox('please select the language for the name that you wish',['Nepali', 'English', 'Chinese', 'Hindi'])
+        origin = st.selectbox('Please choose the language for the baby names and click "Generate Names." Please allow up to 30 seconds for the names to be generated.',['Nepali', 'English', 'Chinese', 'Hindi'])
         os.environ['OPENAI_API_KEY'] = openai_key
 
         prompt = PromptTemplate(template="Generate atleast 5 unique and rare names of {origin} for both male and female and include the meaning of each names",
